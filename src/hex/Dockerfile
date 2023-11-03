@@ -1,4 +1,4 @@
-FROM golang:1.15.3-alpine3.12
+FROM golang:1.21.3-alpine3.18
 
 EXPOSE 9000
 
@@ -17,7 +17,7 @@ COPY . .
 COPY ./grpc_entrypoint.sh /usr/local/bin/grpc_entrypoint.sh
 RUN /bin/chmod +x /usr/local/bin/grpc_entrypoint.sh
 
-RUN go build cmd/main.go
+RUN go build ./cmd/main.go
 RUN mv main /usr/local/bin
 
 CMD ["main"]
