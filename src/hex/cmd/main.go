@@ -1,24 +1,40 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"os"
+
 	"hex-arch-template/internal/adapters/app/api"
 	"hex-arch-template/internal/adapters/core/arithmetic"
+	rpc "hex-arch-template/internal/adapters/framework/left/grpc"
 	"hex-arch-template/internal/adapters/framework/right/db"
 	"hex-arch-template/internal/ports"
-	"log"
 )
 
 func main() {
-	// ports
-	var core ports.ArithmeticPort = arithmetic.NewAdapter()
-	db, err := db.NewAdapter("mysql", "")
+	var err error
+
+	var dbaseAdapter ports.DbPort
+	var arithmeticAdapter ports.ArithmeticPort
+	var appAdapter ports.APIPort
+	var gRPCAdapter ports.GRPCPort
+
+	dbaseDriver := os.Getenv("DB_DRIVER")
+	dsourceName := os.Getenv("DS_NAME")
+
+	dbaseAdapter, err = db.NewAdapter(dbaseDriver, dsourceName)
 
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("failed to initiate db connection: %v", err)
 	}
 
-	var app ports.APIPort = api.NewAdapter(db, core)
+	defer dbaseAdapter.CloseDbConnection()
 
-	fmt.Println(app.GetAddition(1, 4))
+	arithmeticAdapter = arithmetic.NewAdapter()
+
+	appAdapter = api.NewAdapter(dbaseAdapter, arithmeticAdapter)
+
+	gRPCAdapter = rpc.NewAdapter(appAdapter)
+
+	gRPCAdapter.Run()
 }
