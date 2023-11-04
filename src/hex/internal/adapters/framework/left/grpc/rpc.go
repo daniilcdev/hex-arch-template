@@ -3,7 +3,7 @@ package rpc
 import (
 	"context"
 
-	"hex-arch-template/internal/adapters/framework/left/grpc/pb"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/left/grpc/pb"
 )
 
 func (a Adapter) GetAddition(ctx context.Context, req *pb.OperationParameters) (*pb.Answer, error) {

@@ -1,4 +1,4 @@
-module hex-arch-template
+module github.com/daniilcdev/hex-arch-template
 
 go 1.21.3
 

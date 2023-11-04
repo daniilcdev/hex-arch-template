@@ -1,6 +1,6 @@
 package api
 
-import "hex-arch-template/internal/ports"
+import "github.com/daniilcdev/hex-arch-template/hex/internal/ports"
 
 type Adapter struct {
 	db    ports.DbPort

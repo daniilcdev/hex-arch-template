@@ -2,14 +2,15 @@ package rpc
 
 import (
 	"context"
-	"hex-arch-template/internal/adapters/app/api"
-	"hex-arch-template/internal/adapters/core/arithmetic"
-	"hex-arch-template/internal/adapters/framework/left/grpc/pb"
-	"hex-arch-template/internal/adapters/framework/right/db"
 	"net"
 	"testing"
 
-	"hex-arch-template/internal/ports"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/app/api"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/core/arithmetic"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/left/grpc/pb"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/right/db"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/ports"
+
 	"log"
 	"os"
 

@@ -4,8 +4,8 @@ import (
 	"log"
 	"net"
 
-	"hex-arch-template/internal/adapters/framework/left/grpc/pb"
-	"hex-arch-template/internal/ports"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/left/grpc/pb"
+	"github.com/daniilcdev/hex-arch-template/hex/internal/ports"
 
 	"google.golang.org/grpc"
 )
