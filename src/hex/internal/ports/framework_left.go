@@ -3,7 +3,7 @@ package ports
 import (
 	"context"
 
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/left/grpc/pb"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/framework/left/grpc/pb"
 )
 
 type GRPCPort interface {

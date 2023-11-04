@@ -4,11 +4,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/app/api"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/core/arithmetic"
-	rpc "github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/left/grpc"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/right/db"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/ports"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/app/api"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/core/arithmetic"
+	rpc "github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/framework/left/grpc"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/framework/right/db"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/ports"
 )
 
 func main() {

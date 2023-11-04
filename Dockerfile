@@ -17,6 +17,7 @@ COPY . .
 COPY ./grpc_entrypoint.sh /usr/local/bin/grpc_entrypoint.sh
 RUN /bin/chmod +x /usr/local/bin/grpc_entrypoint.sh
 
+WORKDIR /app/src/hex
 RUN go build ./cmd/main.go
 RUN mv main /usr/local/bin
 

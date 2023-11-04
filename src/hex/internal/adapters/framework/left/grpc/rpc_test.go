@@ -5,11 +5,11 @@ import (
 	"net"
 	"testing"
 
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/app/api"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/core/arithmetic"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/left/grpc/pb"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/adapters/framework/right/db"
-	"github.com/daniilcdev/hex-arch-template/hex/internal/ports"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/app/api"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/core/arithmetic"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/framework/left/grpc/pb"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/adapters/framework/right/db"
+	"github.com/daniilcdev/hex-arch-template/src/hex/internal/ports"
 
 	"log"
 	"os"
